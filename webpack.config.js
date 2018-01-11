@@ -122,6 +122,14 @@ module.exports = {
         "loader": "raw-loader"
       },
       {
+          test: /\.pug/,
+          loaders: ['html-loader', 'pug-html-loader'],
+          options: {
+            // options to pass to the compiler same as: https://pugjs.org/api/reference.html
+            data: {} // set of data to pass to the pug render.
+          }
+      },
+      {
         "test": /\.(eot|svg|cur)$/,
         "loader": "file-loader",
         "options": {
